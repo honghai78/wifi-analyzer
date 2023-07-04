@@ -37,7 +37,67 @@
 </p> <p>
     Link to the privacy policy of third-party service providers used
     by the app
-</p> <ul><li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li><li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">AdMob</a></li><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></ul></div> <p><strong>Log Data</strong></p> <p>
+</p> 
+    <ul><li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li><li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">AdMob</a></li><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></ul></div>
+<p><strong>Android WiFi scanning throttling</strong></p>
+<h5>Android 8.0 and Android 8.1:</h5>
+Each background app can scan one time in a 30-minute period.
+<h5>Android 9:</h5>
+Each foreground app can scan four times in a 2-minute period. This allows for a burst of scans in a short time.
+
+All background apps combined can scan one time in a 30-minute period.
+
+<h5>Android 10 and higher:</h5>
+The same throttling limits from Android 9 apply. There is a new developer option to toggle the throttling off under Settings > Developer Options > Networking > Wi-Fi scan throttling.
+<h5>Android References:</h5>
+<ul>
+    <li>
+        <a href="https://developer.android.com/guide/topics/connectivity/wifi-scan#wifi-scan-throttling" target="_blank" rel="noopener noreferrer">Android Wi-Fi scanning overview documentation</a>
+    </li>
+    <li>
+        <a href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener noreferrer">Configure on-device developer options</a>
+    </li>
+</ul>
+
+<div class="markdown-body">
+    <strong>Location Service Permission Requirements</strong>
+    <p>Since the latest release of Android OS 9 (Pie), location services permission is required for WiFi scanning to function. As a result, we had to update the application to request these permissions. As always, we will not store or transmit your location information at any time - privacy is important! However, for those users who wish to remain using the old version of the application, it will be available for any Android device using Android 8 (Oreo) and lower OS for a period of time.</p>
+    <h5>Play Store Instructions:</h5>
+    <p>To install old version, just uninstall the latest version of the application from your device, go to the play store and install the application. It will automatically install old version, as long as device is not running Android 9 (Pie). Do not forget to disable automatic update.</p>
+    <h5>Android Wi-Fi scanning overview documentation references</h5>
+    <ul>
+        <li><a href="https://developer.android.com/guide/topics/connectivity/wifi-scan" rel="nofollow">Wi-Fi scanning overview</a></li>
+        <li><a href="https://developer.android.com/guide/topics/connectivity/wifi-scan#wifi-scan-restrictions" rel="nofollow">Restrictions</a></li>
+        <li><a href="https://developer.android.com/guide/topics/connectivity/wifi-scan#wifi-scan-permissions" rel="nofollow">Permissions</a></li>
+        <li><a href="https://developer.android.com/guide/topics/connectivity/wifi-scan#wifi-scan-throttling" rel="nofollow">Throttling</a></li>
+    </ul>
+    <h5>Android OS 9 Wi-Fi scanning permissions requirements</h5>
+    <ul>
+        <li>ACCESS_FINE_LOCATION or ACCESS_COARSE_LOCATION</li>
+        <li>CHANGE_WIFI_STATE</li>
+        <li>ACCESS_WIFI_STATE</li>
+        <li>Location services must be enabled on the device</li>
+        <li>Android documentation reference: <a href="https://developer.android.com/guide/topics/connectivity/wifi-scan#wifi-scan-permissions" rel="nofollow">Permissions</a>
+        </li>
+    </ul>
+    <h5>Android OS 8 Wi-Fi scanning permissions requirements</h5>
+    <ul>
+        <li>ACCESS_FINE_LOCATION or ACCESS_COARSE_LOCATION or CHANGE_WIFI_STATE</li>
+        <li>ACCESS_WIFI_STATE</li>
+        <li>Location services must be enabled on the device</li>
+        <li>Android documentation reference: <a href="https://developer.android.com/guide/topics/connectivity/wifi-scan#wifi-scan-permissions" rel="nofollow">Permissions</a>
+        </li>
+    </ul>
+    <h5>Android OS 6 may require Location Service to be switched on</h5>
+    <p>Some users running Android OS 6+ (Marshmallow) have reported that the location service must be enabled for the application to see WiFi networks. Users using the the above versions of Android OS may need to turn on the location service, even though WiFi Analyzer does not explicitly require it. This appears to be attributed to permission model changes since Android Marshmallow, the knowledge of nearby WiFi access points is regarded as containing location information and is protected by location permission.</p>
+    <ul>
+        <li>Android documentation reference: <a href="https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html#behavior-hardware-id" rel="nofollow">Hardware Identifier</a>
+        </li>
+    </ul>
+
+</div>
+
+<p><strong>Log Data</strong></p> <p>
     I want to inform you that whenever you
     use my Service, in a case of an error in the app
     I collect data and information (through third-party
@@ -47,7 +107,8 @@
     configuration of the app when utilizing my Service,
     the time and date of your use of the Service, and other
     statistics.
-</p> <p><strong>Cookies</strong></p> <p>
+</p>
+<p><strong>Cookies</strong></p> <p>
     Cookies are files with a small amount of data that are
     commonly used as anonymous unique identifiers. These are sent
     to your browser from the websites that you visit and are
@@ -60,7 +121,8 @@
     and know when a cookie is being sent to your device. If you
     choose to refuse our cookies, you may not be able to use some
     portions of this Service.
-</p> <p><strong>Service Providers</strong></p> <p>
+</p> 
+<p><strong>Service Providers</strong></p> <p>
     I may employ third-party companies and
     individuals due to the following reasons:
 </p> <ul><li>To facilitate our Service;</li> <li>To provide the Service on our behalf;</li> <li>To perform Service-related services; or</li> <li>To assist us in analyzing how our Service is used.</li></ul> <p>
